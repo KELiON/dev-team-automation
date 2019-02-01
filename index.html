@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Автоматизация отдела разработки</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
@@ -14,25 +14,37 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
+        <h1>Автоматизация отдела разработки</h1>
         <p>Yours Truly, Famous Inc.</p>
     </header>
 
     <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
+        <h2>Автоматизация отдела разработки</h2>
+        <img class="main-cover" src="pictures/robot.jpeg">
+		<img class="logo" src="pictures/logo.svg" id="logo" />
+        <p><a href="http://asubbotin.ru">Александр Субботин</a></p>
+
         <style>
+            #logo {
+                position: absolute;
+                bottom: 50px;
+                right: 10px;
+                width: 150px;
+            }
+            #cover .main-cover {
+                filter: blur(4px);
+                position: absolute;
+                top: -5%;
+                left: -5%;
+                width: 110%;
+                z-index: -1;
+            }
             #cover h2 {
-                margin: 30px 0 0;
+                margin: 20% 0 0;
                 color: white;
                 text-align: center;
                 font-size: 70px;
+                text-shadow: 1px 1px 5px #111;
             }
 
             #cover p {
@@ -50,55 +62,175 @@
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
+        <h2>Зачем нужна автоматизация?</h2>
         <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
+            <li>DRY – don't repeat yourself</li>
+            <li>Освободить голову</li>
+            <li>Минимизировать вероятность человеческой ошибки</li>
+            <li>Стандартизировать способы решения задач</li>
         </ol>
     </section>
 
     <section class="slide">
-        <h2>Serious citations</h2>
+        <h2>С чего начать?</h2>
+        <p>Попробуйте продуктовый подход</p>
+        <ul>
+            <li>Находите ключевые процессы</li>
+            <li>Выделяйте ключевые метрики</li>
+            <li>Анализируйте</li>
+            <li>Проводите интервью с «пользователями»</li>
+            <li>Выдвигайте и тестируйте гипотезы</li>
+            <li>Двигайтесь итерациями</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="printit">
+        <h2>1. Документирование процессов</h2>
         <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
+            <img class="cover" src="pictures/printer.jpg">
         </figure>
+        <style>
+            #printit h2 {
+                color: white;
+                position: absolute;
+                left: 150px;
+                bottom: 20px;
+                text-shadow: 1px 1px 3px #000;
+            }
+        </style>
     </section>
+
+    <section class="slide">
+        <h2>Документирование процессов: зачем?</h2>
+        <ul>
+            <li>Один инструмент: github, confluence, google docs, etc</li>
+            <li>Возможность поиска, ссылки на главы/пункты</li>
+            <li>Прозрачный процесс предложения изменений</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Документирование процессов: как?</h2>
+        <ul>
+            <li class="next">Система != бюрократия</li>
+            <li class="next">Система должна ускорять и упрощать, а не наоборот</li>
+            <li class="next">Желательно отвечать на вопрос «почему так?»</li>
+            <li class="next">Чем больше ключевых процессов регламентировано — тем лучше</li>
+            <li class="next">Нужно оставлять возможность для обхода</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Документирование процессов: что?</h2>
+        <ul>
+            <li>Онбординг</li>
+            <li>Проекты: ссылки, названия, что и где искать?</li>
+            <li>Процесс-код ревью</li>
+            <li>Чек-листы, best-practices</li>
+            <li>Базы знаний, сборники статей, книг, видео, etc</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Документирование процессов: примеры</h2>
+        <ul>
+            <li class="next"><a href="https://github.com/basecamp/handbook">basecamp/handbook</a></li>
+            <li class="next"><a href="https://assets.sbnation.com/assets/1074301/Valve_Handbook_LowRes.pdf">Valve</a></li>
+            <li class="next"><a href="https://trello.com/b/HbTEX5hb/employee-manual">Trello manual</a></li>
+            <li class="next"><a href="https://github.com/Hexlet/hexlet-handbook">Hexlet/hexlet-handbook</a></li>
+        </ul>
+        <img src="pictures/confluence-structure.png" id="confluence-structure" class="next" />
+        <style>
+            #confluence-structure {
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                top: 25%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="templateit">
+        <h2>
+            <span class="template-template">`2. Использование</span><span class="template-wrapper">${</span><span class="template-variable">шаблонов</span><span class="template-wrapper">}</span><span class="template-template">`</span>
+        </h2>
+        <style>
+            #templateit {
+                background: url("pictures/pattern.png");
+            }
+            #templateit h2 {
+                margin-top: 150px;
+            }
+            #templateit .template-template{
+                color: #3C3C3C;
+            }
+            #templateit .template-wrapper{
+                color: #FFFFFF;
+            }
+            #templateit .template-variable {
+                color: #DA0E19;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Шаблоны: что?</h2>
+        <ul>
+            <li>Pull-requests</li>
+            <li>Release, changelog</li>
+            <li>Task</li>
+            <li>Инциденты</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Шаблоны: PR</h2>
+        <img src="pictures/feature-template.png" class="full-screen-image" />
+        <style>
+            .full-screen-image {
+                height: 80%;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Шаблоны: PR</h2>
+        <img src="pictures/feature-example.png" class="full-screen-image" />
+    </section>
+
+    <section class="slide">
+        <h2>Шаблоны: Release, changelog</h2>
+        <img src="pictures/release-template.png" class="full-screen-image" />
+    </section>
+
+    <section class="slide" id="toolit">
+        <h2>3. Свои инструменты</h2>
+        <figure>
+            <img class="cover" src="pictures/tools.jpg">
+        </figure>
+        <style>
+            #toolit .cover {
+                filter: blur(1px);
+            }
+            #toolit h2 {
+                color: white;
+                text-align: center;
+                margin-top: 150px;
+                text-shadow: 1px 1px 5px #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Свои инструменты</h2>
+        <img src="pictures/appbooster-cli.png" class="full-screen-image"/>
+    </section>
+
+    <section class="slide">
+        <h2>Свои инструменты</h2>
+        <img src="pictures/chrome-plugin.png" class="full-screen-image"/>
+    </section>
+
 
     <section class="slide">
         <h2>Code samples</h2>
