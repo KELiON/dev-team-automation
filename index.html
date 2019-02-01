@@ -64,10 +64,10 @@
     <section class="slide">
         <h2>Зачем нужна автоматизация?</h2>
         <ol>
-            <li>DRY – don't repeat yourself</li>
-            <li>Освободить голову</li>
-            <li>Минимизировать вероятность человеческой ошибки</li>
-            <li>Стандартизировать способы решения задач</li>
+            <li class="next">DRY – don't repeat yourself</li>
+            <li class="next">Освободить голову</li>
+            <li class="next">Минимизировать вероятность человеческой ошибки</li>
+            <li class="next">Стандартизировать способы решения задач</li>
         </ol>
     </section>
 
@@ -174,7 +174,7 @@
     </section>
 
     <section class="slide">
-        <h2>Шаблоны: что?</h2>
+        <h2>Шаблоны: для чего?</h2>
         <ul>
             <li>Pull-requests</li>
             <li>Release, changelog</li>
@@ -231,112 +231,219 @@
         <img src="pictures/chrome-plugin.png" class="full-screen-image"/>
     </section>
 
-
     <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
+        <h2>Свои инструменты</h2>
+        <img src="pictures/rubocop-screenshot.png" class="shared-config-img"/>
+        <img src="pictures/eslint-screenshot.png" class="shared-config-img"/>
+        <img src="pictures/eslint-react-screenshot.png" class="shared-config-img"/>
+
+        <style>
+            .shared-config-img {
+                width: 300px;
+                display: block;
+            }
+        </style>
     </section>
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
+    <section class="slide" id="ciit">
+        <h2>4. Continues integration</h2>
         <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
+            <img class="cover" src="pictures/ci.jpg">
         </figure>
         <style>
-            #picture h2 {
+            #ciit .cover {
+                filter: blur(6px);
+            }
+            #ciit h2 {
+                color: white;
+                text-align: center;
+                margin-top: 150px;
+                text-shadow: 1px 1px 5px #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>CI</h2>
+        <ul>
+            <li>Подключать для всех проектов</li>
+            <li>Не использовать просто как true/false</li>
+            <li>Деплой/сборка всегда через CI</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>CI</h2>
+        <div class="columns two">
+            <ul>
+                <li class="next">Тесты + coverage</li>
+                <li class="next">Codestyle:
+                    <ul>
+                        <li>eslint + <a href="https://github.com/appbooster/eslint-config">own config</a>
+                        <li>
+                            rubocop + <a href="https://github.com/appbooster/rubocop_config">config</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="next">Types check (flow / typescript)</li>
+                <li class="next">
+                    Проверка орфографии (<a href="https://github.com/hcodes/yaspeller">yaspeller</a>)
+                </li>
+                <li class="next">Деплой/сборка всегда через CI</li>
+            </ul>
+            <ul>
+                <li class="next">Vulnurability check</li>
+                <li class="next">Запрет на «разрастание» пакетов</li>
+                <li class="next">Git styleguide check</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="slide" id="robotizeit">
+        <h2>5. Свои роботы</h2>
+        <figure>
+            <img class="cover" src="pictures/robot.gif" style="width: 100%; height: 100%;">
+        </figure>
+        <style>
+            #robotizeit h2 {
+                color: white;
+                text-align: left;
+                position: absolute;
+                top: 100px;
+                left: 150px;
+                text-shadow: 1px 1px 5px #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: API + webhooks</h2>
+        <ul>
+            <li>Jira</li>
+            <li>Slack</li>
+            <li>Github</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: github API</h2>
+        <ul>
+            <li>Создать PR</li>
+            <li>Создать репозиторий</li>
+            <li>Добавить check / review</li>
+            <li>Добавить коммент</li>
+            <li>Добавить лейбл</li>
+            <li>Добавить юзера</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: <a href="https://probot.github.io/">probot</a></h2>
+        <ul>
+            <li>Быстрый старт — 2 минуты</li>
+            <li>Большая <a href="https://probot.github.io/apps/">база</a> готовых ботов</li>
+            <li>Возможность композиции ботов</li>
+            <li>Простота (nodejs, serverless)</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: appbooster-bot</h2>
+        <ul>
+            <li>
+                Удаляет ветку после мёржа PR
+                <img src="pictures/bot-delete-branch.png" alt="" style="width: 700px;">
+            </li>
+            <li class="next">
+                Мёржит PR с выбором правильной стратегии по команде <code>@appbooster-bot merge</code>
+                <ul>
+                    <li>Squash & Merge если это PR в master</li>
+                    <li>Create Merge Commit если это PR в production</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: appbooster-bot</h2>
+        <ul>
+            <li class="next">
+                Проверяет описание к PR
+                <img src="pictures/bot-check-description.png" alt="" style="width: 700px; display: inline;">
+            </li>
+            <li class="next">
+                Проверяет, что в названии нет пометки WIP
+                <img src="pictures/bot-wip-check.png" alt="" style="width: 450px; display: block;">
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: appbooster-bot</h2>
+        <ul>
+            <li>Синхронизирует настройки репозитория из файла <code>.github/settings.yml</code>
+                <ul>
+                    <li>Дефолтная ветка</li>
+                    <li>Настройки protected branch</li>
+                    <li>Список лейблов</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: appbooster-bot</h2>
+        <ul>
+            <li>
+                После создания нового репозитория создаёт PR с добавлением 2 файлов
+                <ul>
+                    <li>шаблон <code>.github/PULL_REQUEST_TEMPLATE.md</code></li>
+                    <li>настройки <code>.github/settings.yml</code></li>
+                </ul>
+                <img src="pictures/bot-new-repo.png" alt="" style="width: 450px; display: block; margin-top: 50px;" />
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свои роботы: планы</h2>
+        <ul>
+            <li>Синхронизация настроек и шаблонов</li>
+            <li>Определение типа проекта и добавление инструментов и конфигов</li>
+            <li>Автоматизировать добавление/удаление лейблов</li>
+            <li>Некоторые проверки в коде (.env, secrets, etc)</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="ThankYou">
+        <h2>Автоматизация отдела разработки</h2>
+        <p>Александр&nbsp;Субботин, Appbooster</p>
+        <ul>
+            <li><a href="https://twitter.com/kelion">@kelion</a></li>
+            <li><a href="https://asubbotin.ru">asubbotin.ru</a></li>
+            <li><a href="https://github.com/KELiON">github.com/KELiON</a></li>
+            <li><a href="mailto:kelionweb@gmail.com">kelionweb@gmail.com</a></li>
+        </ul>
+        <img class="logo" src="pictures/logo.svg" id="logo" />
+        <p>Презентация: <a href="http://kelion.github.io/dev-team-automation/">kelion.github.io/dev-team-automation/</a></p>
+        <style>
+            #ThankYou {
+                background-color: black;
+                color: white;
+            }
+            #ThankYou h2 {
                 color: white;
             }
         </style>
     </section>
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
-
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
-
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
-
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+        <a href="https://github.com/KELiON">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
 
     <script src="shower/shower.min.js"></script>
-    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
-
 </body>
 </html>
